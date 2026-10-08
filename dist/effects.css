@@ -1,0 +1,47 @@
+/* Projects: rendering layer only. No project layout rules are overridden. */
+.project-glass-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:61;pointer-events:none}
+.glass-edge{display:none!important}
+
+/* A transformed dialog would anchor its fixed cursor to the scrolling dialog. */
+@keyframes quick-dialog-fade{from{opacity:0}to{opacity:1}}
+.quick-view{animation-name:quick-dialog-fade}
+
+/* Personal media keeps its full composition inside the established frames. */
+.project-media video{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.82);transition:transform 1.4s var(--ease),filter .8s}
+.project-media:hover video{transform:scale(1.025);filter:saturate(1)}
+.project-media .media-contain,.case-cover .media-contain{object-fit:contain;background:#fff}
+.case-cover video{display:block;width:100%;height:100%;object-fit:contain}
+.case-detail-images .media-contain{width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain;background:#fff}
+.case-detail-images video{display:block;width:100%;height:auto;align-self:start;object-fit:contain;background:#fff}
+.case-copy p+p{margin-top:1.5em}
+.case-translation{margin-top:42px}
+.case-copy p[lang=en]{color:#999}
+.case-title h1{overflow-wrap:anywhere}
+
+/* About: a fixed model with a continuous, circular stream of independently placed rows. */
+.about-page{overflow:hidden;overscroll-behavior:none;scroll-behavior:auto;touch-action:none;animation:none}
+.about-stage{position:absolute;inset:0;overflow:hidden;touch-action:none;outline:none;opacity:0;transition:opacity .7s var(--ease)}
+.about-stage.ready{opacity:1}
+.about-loop-track{position:absolute;inset:0;overflow:visible}
+.about-loop-block{position:absolute;left:0;top:0;width:100%;will-change:transform;overflow:visible}
+.about-loop-line{position:absolute;left:50%;margin:0;padding:0;white-space:pre;line-height:1!important;max-width:none;will-change:transform;font-synthesis:none}
+.about-loop-line[data-side=left]{text-align:right}
+.about-loop-line[data-side=right]{text-align:left}
+.about-loop-line[data-side=header-left]{text-align:right}
+.about-loop-line[data-side=header-right]{text-align:left}
+.about-loop-title{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font:300 clamp(52px,5.7vw,88px)/1 var(--serif);letter-spacing:-.03em;margin:0}
+.about-loop-title span{font:500 18px var(--sans);letter-spacing:3px;margin-left:20px;vertical-align:baseline}
+.about-hero-eyebrow{color:#777}
+.about-hero-statement{letter-spacing:-.025em}
+.about-roman{font-weight:300!important}
+.about-block-label{font-weight:500!important}
+.about-draft{color:#999}
+.about-loop-line[data-about-action=contact]{border-bottom:1px solid #aaa;padding-bottom:7px}
+.about-loop-line[data-about-action=top]{color:#777}
+.about-obstacle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;pointer-events:none}
+.about-obstacle canvas{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .9s var(--ease)}
+.about-obstacle.model-ready canvas{opacity:1}
+.about-model-fallback{position:absolute;width:190%;height:190%;left:-45%;top:-45%;object-fit:contain;opacity:1;transition:opacity .35s}
+.about-obstacle.model-ready .about-model-fallback{opacity:0}
+@media(max-width:640px){.about-loop-title{font-size:48px;letter-spacing:-1.7px}.about-loop-title span{font-size:14px;margin-left:12px;letter-spacing:2px}.about-hero-statement{letter-spacing:-.03em}}
+@media(prefers-reduced-motion:reduce){.about-stage,.about-obstacle canvas{transition:none}}

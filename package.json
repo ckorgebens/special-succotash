@@ -1,0 +1,7 @@
+{
+  "name": "leon-portfolio-preview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "node server.mjs", "check": "node --check dist/app.js && node --check dist/data.js && node --check dist/project-copy.js && node --check dist/sphere.js && node --check dist/edge-glass.js && node --check dist/about-loop.js && node --check server.mjs && node scripts/check-assets.mjs" }
+}

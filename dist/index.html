@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Leon 蓝彦士 — 多领域创意设计师。产品设计、品牌视觉与数字体验。">
+  <title>Leon 蓝彦士 — Multi-Disciplinary Designer</title>
+  <link rel="icon" type="image/png" href="./assets/leon/favicon.png">
+  <link rel="preload" href="./assets/Teodor-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./assets/LayGrotesk-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./effects.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至内容</a>
+  <header class="header">
+    <div class="nav-cluster"><a class="monogram" href="#creative" aria-label="Leon — 创意画廊">LE.N</a>
+    <nav class="navigation" aria-label="主导航">
+      <a href="#creative" data-section="creative" aria-label="Creative Space 1" aria-current="page"><span>Creative Space</span><sup>1</sup></a>
+      <a href="#projects" data-section="projects" aria-label="Projects 2"><span>Projects</span><sup>2</sup></a>
+      <a href="#about" data-section="about" aria-label="About 3"><span>About</span><sup>3</sup></a>
+    </nav>
+    </div>
+    <button class="motion-toggle" aria-label="暂停画廊自动旋转" aria-pressed="false" title="暂停 / 继续画廊">
+      <span></span><span></span><span></span><span></span>
+    </button>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="creative" class="page creative-page" aria-label="创意画廊">
+      <h1 class="sr-only">Leon 蓝彦士 — 多领域创意设计师</h1>
+      <div id="sphere-stage" class="sphere-stage" aria-label="球面作品画廊：拖动旋转，滚轮调整转速，点击打开作品">
+        <canvas id="sphere" aria-hidden="true"></canvas>
+        <div id="sphere-fallback" hidden></div>
+        <div class="gallery-loader" aria-live="polite"><span>Loading creative space</span><i></i></div>
+      </div>
+      <div class="side-identity"><span>Leon <span class="chinese-name">蓝彦士</span></span></div>
+      <div class="side-profession"><span>Multi-Disciplinary Designer</span><small>广州美术学院 · 产品设计艺术设计系</small></div>
+      <div class="gallery-caption" aria-live="polite"><span id="gallery-title">A space for ideas.</span><small id="gallery-category">Drag to explore</small></div>
+      <button class="gallery-access" aria-label="通过列表浏览全部画廊作品">Index <span>↗</span></button>
+      <div id="gallery-index" class="gallery-index" hidden><div class="index-heading">Creative index<button aria-label="关闭作品索引">Close ×</button></div><div id="index-items"></div></div>
+    </section>
+    <section id="projects" class="page scroll-page projects-page" aria-labelledby="projects-title" hidden>
+      <div class="page-intro reveal"><span class="eyebrow">A selection of work</span><h1 id="projects-title">Selected<br><em>work.</em></h1><div class="intro-note"><p>产品、视觉与数字体验。<br>在不同领域之间，寻找设计的共同语言。</p><span>Selected projects & explorations</span></div></div>
+      <div class="margin-label">Projects — Selected Works</div>
+      <div id="project-list" class="project-list"></div>
+      <section class="explorations" aria-labelledby="explorations-title"><div class="section-heading reveal"><h2 id="explorations-title">Explorations</h2><p>Studies in form, material & movement.</p></div><div id="exploration-grid" class="exploration-grid"></div></section>
+      <footer class="project-footer reveal"><span>Have something in mind?</span><button data-go="about">Let’s talk.<span>↗</span></button><p>Leon 蓝彦士<br>Multi-Disciplinary Designer</p></footer>
+    </section>
+    <section id="about" class="page scroll-page about-page" aria-labelledby="about-title" hidden>
+      <div class="about-original" hidden>
+      <div class="about-hero reveal"><span class="eyebrow">About the designer</span><h1 id="about-title">Leon<span class="about-name">蓝彦士</span><em>A curious mind.<br>A considered approach.</em></h1><div class="about-education"><span>Guangzhou, China</span><p>广州美术学院<br>产品设计艺术设计系</p></div><div class="about-visual"><img src="./assets/glass-study.png" alt="浅青色玻璃材质的有机形态实验"></div></div>
+      <div class="about-story reveal"><span class="eyebrow">Across disciplines</span><p>在产品、视觉与数字世界之间，<br>探索形式的可能，<br><em>让想法成为可感知的体验。</em></p><div class="about-copy">我希望通过细致的观察与持续的实验，让形式、材料与交互彼此回应。从一个物体的质感，到一个画面的节奏，设计的表达可以跨越媒介，也可以回到日常。</div></div>
+      <div class="principles"><article class="reveal"><span>01</span><h2>Quality</h2><p>为每一个设计决定留下思考的空间。在形式、功能与语境之间，寻找恰当的平衡。</p></article><article class="reveal"><span>02</span><h2>Feel</h2><p>关注人与设计相遇时的感受。让材质、比例与交互共同构成自然、直觉的体验。</p></article><article class="reveal"><span>03</span><h2>Purpose</h2><p>从真实的问题出发，保持清晰的表达。让每个细节都有它存在的理由。</p></article></div>
+      <footer class="contact-footer reveal"><span class="eyebrow">Contact & collaboration</span><h2>Let’s create<br><em>something meaningful.</em></h2><div class="contact-row"><div><span>联系方式</span><p>18011717130@163.com<br>微信：lanyanshi25</p></div><a id="contact-button" href="mailto:18011717130@163.com">Get in touch <span>↗</span></a></div><div class="footer-meta"><span>© 2026 Leon 蓝彦士</span><span>Product · Visual · Digital</span><a href="#about" id="back-to-top">Back to top ↑</a></div></footer>
+      </div>
+    </section>
+  </main>
+  <span class="page-index" aria-hidden="true">001</span>
+  <div id="cursor" aria-hidden="true"><span></span></div>
+  <dialog id="quick-view" class="quick-view"><button class="quick-close" aria-label="关闭作品预览">Close ×</button><div class="quick-media"></div><div class="quick-info"><div><h2></h2><p></p></div><button class="quick-case">View Case ↗</button></div><small class="sample-note" hidden></small></dialog>
+  <section id="case-view" class="case-view" role="dialog" aria-modal="true" aria-label="项目详情" tabindex="-1" hidden><header class="case-header"><button id="close-case">← Back to projects</button><span>Case study</span><span id="case-number"></span></header><div id="case-content"></div></section>
+  <div class="toast" role="status" hidden></div>
+  <svg class="svg-filters" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><filter id="edge-glass" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.09" numOctaves="1" seed="4" result="noise"/><feGaussianBlur in="noise" stdDeviation="1.4" result="smooth"/><feDisplacementMap in="SourceGraphic" in2="smooth" scale="5.5" xChannelSelector="R" yChannelSelector="G" result="refracted"/><feOffset in="refracted" dx="0.4" result="red"/><feColorMatrix in="red" type="matrix" values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" result="r"/><feOffset in="refracted" dx="-0.4" result="blue"/><feColorMatrix in="blue" type="matrix" values="0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" result="gb"/><feComposite in="r" in2="gb" operator="arithmetic" k2="1" k3="1"/></filter></defs></svg>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
